@@ -1,4 +1,4 @@
-# CompteurDeMots V.1.0.2
+# CompteurDeMots V.1.0.3
 
 **CompteurDeMots** est un outil javascript développé par un étudiant en informatique pour calculer le nombre de mots dans un texte français le plus précisément possible.
 
@@ -14,6 +14,5 @@ Contrairement à la plupart des autres outils, celui-ci permet de :
 
 > Derniers ajouts
 
- - Modifications mineurs au front end HTML (compte de mot plus dynamique, affichage du nombre de caractères)
- - Ajout du compte du nombres de caractères restant
- - Optimisation back end lors de l'initialisation de la page
+ - Optimisation des tableaux de caractères et de mots
+ - Fix de bugs majeurs dans le script
