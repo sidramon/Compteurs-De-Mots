@@ -14,7 +14,6 @@ Contrairement à la plupart des autres outils, celui-ci permet de :
 
 > Derniers ajouts
 
- - Liste de symboles ignorés agrandie -> `"%", "*", "<", ">", "+", "#", "^", "|", "/", "\", "±", "@", "£", "¢", "¤", "¬", "¦", "²", "³", "¼", "½", "¾", "~­", "¯"`
-
-
- - Mise en place du readme.md
+ - Modifications mineurs au front end HTML (compte de mot plus dynamique, affichage du nombre de caractères)
+ - Ajout du compte du nombres de caractères restant
+ - Optimisation back end lors de l'initialisation de la page
