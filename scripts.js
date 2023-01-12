@@ -15,7 +15,9 @@ let freqWords = ["saint", "grand", "grands", "arrière", "par", "avant", "à", "
 "petit", "petite", "petits", "petites", "demi", "contre", "mal", "entre", "hors", "non", "sous", "sur", "sus"
 ];
 
-let symbols = ["", " ", "!", "?", ".", "«", "»", "(", ")", '"', "-", ";", ":", ",", "_", "`", "’"];
+let symbols = ["", " ", "!", "?", ".", "«", "»", "(", ")", '"', "-", ";", ":", ",", "_", "`", "’", "%", "*", "<", ">", "+", "=",
+"#", "^", "|", "/", String.raw`\ `.trim(), "±", "@", "£", "¢", "¤", "¬", "¦", "²", "³", "¼", "½", "¾", "~­", "¯"
+];
 
 function countWords() {
   // To JS
