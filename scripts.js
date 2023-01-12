@@ -16,13 +16,22 @@ let freqWords = ["saint", "grand", "grands", "arrière", "par", "avant", "à", "
 ];
 
 let symbols = ["", " ", "!", "?", ".", "«", "»", "(", ")", '"', "-", ";", ":", ",", "_", "`", "’", "%", "*", "<", ">", "+", "=",
-"#", "^", "|", "/", String.raw`\ `.trim(), "±", "@", "£", "¢", "¤", "¬", "¦", "²", "³", "¼", "½", "¾", "~­", "¯"
+"#", "^", "|", "/", String.raw`\ `.trim(), "±", "@", "£", "¢", "¤", "¬", "¦", "²", "³", "¼", "½", "¾", "~­", "¯", "&"
 ];
 
+var nbCharAvailable = 10000;
+
+function init() {
+  countCharacters()
+  countWords()
+}
+
 function countWords() {
+
   // To JS
   let text = document.getElementById("Text").value.split(/\s+|\n+|\r+/);
-  
+  countCharacters();
+
   // Count words
   let nbWords = 0;
 
@@ -98,4 +107,11 @@ function countWords() {
     document.getElementById("nbWords").innerHTML = nbWords + " mots";
   else
     document.getElementById("nbWords").innerHTML = nbWords + " mot";
+}
+
+function countCharacters() {
+  let p = document.getElementById("nbChar");
+  let count = document.getElementById("Text").value.length;
+  
+  p.innerHTML = count + "/" + nbCharAvailable;
 }
