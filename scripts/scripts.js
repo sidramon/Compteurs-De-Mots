@@ -16,6 +16,8 @@ function countWords() {
 
   for(let w = 0; w < text.length; w++) {
     let i = text[w];
+    i = cleanWord(i);
+    // console.log(i)
     let array = i.split("");
 
     if(!symbols.includes(i.toLowerCase()))
@@ -26,7 +28,6 @@ function countWords() {
         if(!symbols.includes(j)) {
           // console.log(i)
           nbWords++;
-          i = cleanWord(i);
           // console.log(i)
           words.push(i);
           c = i.length;
@@ -67,6 +68,7 @@ function countWords() {
 
         let split = Array.from(i.split("-"));
 
+        console.log(i);
         if(j == "-" &&
           !symbols.includes(n) && 
           ( array[0] != array[0].toUpperCase() || n != n.toUpperCase() ) && 
@@ -105,14 +107,15 @@ function countCharacters() {
 
 function cleanWord(word) {
 
-  let cleanWord = Array.from(word.split("")).join("");
+  
+  let cleanWord = word;
 
   for(let x = 0; x < word.length; x++) {
-    if(symbols.includes(cleanWord[x]) && !["'", "’"].includes(cleanWord[x])) {
-      delete cleanWord[x];
+    if(symbols.includes(word[x]) && !["'", "’", "-"].includes(word[x])) {
+      console.log(word[x])
+      cleanWord = cleanWord.replace(word[x], '');
     }
   }
-
+  
   return cleanWord;
-
 }
